@@ -5,6 +5,7 @@ const Tesseract = require('tesseract.js');
 
 const upload = multer({ storage: multer.memoryStorage() });
 
+// 此方法已棄用
 router.post('/upload', upload.single('image'), async (req, res) => {
     try {
         const { buffer } = req.file;
